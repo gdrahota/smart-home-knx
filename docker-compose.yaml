@@ -1,11 +1,11 @@
 version: "3.9"
 services:
-  #  sh-knx-listener:
-  #    container_name: sh-knx-listener
-  #    image: sh-knx-listener
+  #  sh-backend:
+  #    container_name: sh-backend
+  #    image: sh-backend
   #    build:
-  #      context: ./knx-listener
-  #      target: sh-knx-listener
+  #      context: ./backend
+  #      target: sh-backend
   #    environment:
   #      - REDIS_URL=redis://127.0.0.1
   #    depends_on:
@@ -15,7 +15,7 @@ services:
 
   db:
     container_name: sh-mongodb
-    image: "mongo"
+    image: "mongo:4.4"
     ports:
       - "27017:27017"
 
