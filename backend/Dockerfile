@@ -8,7 +8,7 @@ WORKDIR /app
 ###############################################################################
 # Build
 ###############################################################################
-FROM base-stage AS sh-knx-listener
+FROM base-stage AS sh-backend
 
 COPY package* ./
 COPY ./ ./

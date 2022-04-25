@@ -46,8 +46,6 @@
   },
   "dependencies": {
     "@socket.io/redis-adapter": "^7.1.0",
-    "@types/mongoose": "^5.11.97",
-    "@types/socket.io": "^3.0.2",
     "advanced_knx": "^2.3.61",
     "axios": "^0.26.1",
     "binary-parser": "^2.0.2",

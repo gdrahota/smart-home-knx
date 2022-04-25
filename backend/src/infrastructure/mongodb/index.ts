@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
 import { registerModels } from "@/models"
 
-const MONGO_DB_URL = process.env.MONGO_DB_URL || 'mongodb://localhost:27017/sh-smart-home'
+const MONGO_DB_URL = process.env.MONGO_DB_URL || 'mongodb://db:27017/sh-smart-home'
 
 export const connectToMongoDb = async (): Promise<mongoose.Connection> => {
 	const { NODE_ENV } = process.env

@@ -42,7 +42,7 @@ class App {
 
 	async connectToKnx() {
 		redisService = new RedisService(this.redisClient)
-		await connectToKnx(new RedisService(this.redisClient))
+		connectToKnx(new RedisService(this.redisClient)).then()
 	}
 
 	registerMiddleware() {

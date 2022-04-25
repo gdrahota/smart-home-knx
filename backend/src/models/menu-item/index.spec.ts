@@ -1,4 +1,4 @@
-import { connectToMongoDb } from '@/database/mongodb'
+import { connectToMongoDb } from '@/infrastructure/mongodb'
 import { collection } from './index'
 import mongoose from 'mongoose'
 import { iMenuItem } from '@/services/menu-items'
