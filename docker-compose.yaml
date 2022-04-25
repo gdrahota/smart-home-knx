@@ -1,0 +1,29 @@
+version: "3.9"
+services:
+  #  sh-knx-listener:
+  #    container_name: sh-knx-listener
+  #    image: sh-knx-listener
+  #    build:
+  #      context: ./knx-listener
+  #      target: sh-knx-listener
+  #    environment:
+  #      - REDIS_URL=redis://127.0.0.1
+  #    depends_on:
+  #      - sh-redis
+  #    networks:
+  #      - app-network
+
+  db:
+    container_name: sh-mongodb
+    image: "mongo"
+    ports:
+      - "27017:27017"
+
+  sh-redis:
+    container_name: sh-redis
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./data:/data
+    command: redis-server --save 60 1 --loglevel warning

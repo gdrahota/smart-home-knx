@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="/Users/guidodrahota/projects/base-backend/gui/tests/unit/store/login/actions.spec.js">
+    <testCase name="login.actions loginAction() should successfully login" duration="4"/>
+    <testCase name="login.actions loginAction() should fail login" duration="1"/>
+    <testCase name="login.actions logoutAction() should log user out" duration="1"/>
+  </file>
+  <file path="/Users/guidodrahota/projects/base-backend/gui/tests/unit/store/login/getters.spec.js">
+    <testCase name="login.getters userIsLoggedIn() should return false" duration="3"/>
+    <testCase name="login.getters userIsLoggedIn() should return true" duration="0"/>
+    <testCase name="login.getters getLoginInProgress() should return false" duration="0"/>
+    <testCase name="login.getters getLoginInProgress() should return true" duration="0"/>
+    <testCase name="login.getters getLoginError() should return null" duration="1"/>
+    <testCase name="login.getters getLoginError() should return &quot;error-1&quot;" duration="0"/>
+    <testCase name="login.getters getToken() should return null" duration="1"/>
+    <testCase name="login.getters getToken() should return &quot;error-1&quot;" duration="0"/>
+  </file>
+  <file path="/Users/guidodrahota/projects/base-backend/gui/tests/unit/store/login/mutations.spec.js">
+    <testCase name="login.mutations loginMutation() getters.getUserName() should return &quot;first-name-1 last-name-2&quot;" duration="3"/>
+    <testCase name="login.mutations loginMutation() getters.getLoginInProgress() should return false" duration="0"/>
+    <testCase name="login.mutations loginMutation() getters.userIsLoggedIn() should return true" duration="1"/>
+    <testCase name="login.mutations loginMutation() getters.getLoginError() should return null" duration="0"/>
+    <testCase name="login.mutations logoutMutation() getters.userIsLoggedIn() should return false" duration="0"/>
+    <testCase name="login.mutations logoutMutation() getters.getUserName() should return null" duration="1"/>
+    <testCase name="login.mutations logoutMutation() getters.getLoginInProgress() should return false" duration="0"/>
+    <testCase name="login.mutations resetErrorMutation() getters.getLoginError() should return null" duration="0"/>
+    <testCase name="login.mutations setLoginInProgressMutation() getters.getLoginInProgress() should return true" duration="1"/>
+    <testCase name="login.mutations setTokenMutation() initial state value should be null" duration="2"/>
+    <testCase
+      name="login.mutations setTokenMutation() state.userAuthorities = [&quot;ROLE_1&quot;] and provided roles = [&quot;ROLE_1&quot;] should not update store"
+      duration="0"/>
+    <testCase
+      name="login.mutations setTokenMutation() state.userAuthorities = [&quot;ROLE_111&quot;, &quot;ROLE_999&quot;] and provided roles = [&quot;ROLE_999&quot;, &quot;ROLE_111&quot;] should not update store"
+      duration="1"/>
+    <testCase
+      name="login.mutations setTokenMutation() state.userAuthorities = null and provided roles = [&quot;ROLE_1&quot;] should update store"
+      duration="0"/>
+    <testCase
+      name="login.mutations setTokenMutation() state.userAuthorities = [&quot;ROLE_1&quot;] and provided roles = [] should update store"
+      duration="1"/>
+    <testCase
+      name="login.mutations setTokenMutation() state.userAuthorities = [] and provided roles = [&quot;ROLE_1&quot;] should update store"
+      duration="0"/>
+    <testCase
+      name="login.mutations setTokenMutation() state.userAuthorities = [&quot;ROLE_1&quot;] and provided roles = [&quot;ROLE_2&quot;, &quot;ROLE_1&quot;] should update store"
+      duration="1"/>
+    <testCase
+      name="login.mutations setTokenMutation() state.user.authorities = [&quot;ROLE_1&quot;, &quot;ROLE_2&quot;] and provided authorities = [&quot;ROLE_555&quot;, &quot;ROLE_111&quot;, &quot;ROLE_000] should update store"
+      duration="1"/>
+    <testCase
+      name="login.mutations setRequestedRouteBeforeLoginMutation() getters.getRequestedRouteBeforeLogin() should return /path/to/resource"
+      duration="0"/>
+    <testCase name="login.mutations loginFailedMutation() should set state.error" duration="1"/>
+    <testCase name="login.mutations loginFailedMutation() should set state.loginInProgress = false" duration="0"/>
+    <testCase name="login.mutations loginFailedMutation() should set state.loggedInAsUser = null" duration="0"/>
+  </file>
+  <file path="/Users/guidodrahota/projects/base-backend/gui/tests/unit/router/auth-guard.if-indeed-signed-in.spec.js">
+    <testCase name="routeGuard should navigate to home route if indeed signed in and requiresAuth === false" duration="3"/>
+    <testCase name="routeGuard should navigate to home route if indeed signed in and requiresAuth === true" duration="0"/>
+  </file>
+  <file path="/Users/guidodrahota/projects/base-backend/gui/tests/unit/router/auth-guard.if-not-signed-in.spec.js">
+    <testCase name="routeGuard should navigate to home route if not signed in and requiresAuth === false" duration="3"/>
+    <testCase name="routeGuard should NOT navigate to home route if not signed in and requiresAuth === true" duration="1"/>
+  </file>
+  <file path="/Users/guidodrahota/projects/base-backend/gui/tests/unit/components/app/footer/index.spec.js">
+    <testCase name="Footer should NOT show user is &quot;Entwickler&quot;" duration="33"/>
+    <testCase name="Footer should NOT have method with name of &quot;holdsUserRole&quot;" duration="3"/>
+    <testCase name="Footer should show user is &quot;Entwickler&quot;" duration="6"/>
+  </file>
+  <file path="/Users/guidodrahota/projects/base-backend/gui/tests/unit/mixins/root.spec.js">
+    <testCase name="@/mixins -&gt; index -&gt; showDialog() with arg: null should work fine" duration="2"/>
+    <testCase name="@/mixins -&gt; index -&gt; showDialog() with arg: {} should call $q.dialog() with proper argument" duration="1"/>
+    <testCase name="@/mixins -&gt; index -&gt; showDialog() with arg: { title: &quot;Dialog Test Title&quot; } should work fine"
+              duration="0"/>
+    <testCase name="@/mixins -&gt; index -&gt; number() with arg: (123.4567, 2) should return 123.46" duration="11"/>
+    <testCase name="@/mixins -&gt; index -&gt; number() with arg: (0.001, 2) should return 0.00" duration="0"/>
+    <testCase name="@/mixins -&gt; index -&gt; number() with arg: (1234.123456, 4) should return 0.00" duration="0"/>
+    <testCase name="@/mixins -&gt; index notify() with arg: {} should just work fine" duration="1"/>
+    <testCase name="@/mixins -&gt; index notify() with arg: { title: &apos;Dialog Test Title ABC&apos; }, should return 123.46"
+              duration="0"/>
+    <testCase name="@/mixins -&gt; index -&gt; emit() should call $emit()" duration="0"/>
+    <testCase name="@/mixins -&gt; index -&gt; holdsUserAuthority() -&gt; having no user authorities [ ] [] to return true" duration="1"/>
+    <testCase
+      name="@/mixins -&gt; index -&gt; holdsUserAuthority() -&gt; having no user authorities [ ] [&quot;admin-1&quot;] to return false"
+      duration="0"/>
+    <testCase
+      name="@/mixins -&gt; index -&gt; holdsUserAuthority() -&gt; having no user authorities [ ] [&quot;dummy-2&quot;] to return false"
+      duration="0"/>
+    <testCase
+      name="@/mixins -&gt; index -&gt; holdsUserAuthority() -&gt; having these user authorities: [ &apos;admin&apos;, &apos;dummy&apos; ] [&quot;admin&quot;] to return true"
+      duration="0"/>
+    <testCase
+      name="@/mixins -&gt; index -&gt; holdsUserAuthority() -&gt; having these user authorities: [ &apos;admin&apos;, &apos;dummy&apos; ] [&quot;AdMiN&quot;] to return false"
+      duration="0"/>
+    <testCase
+      name="@/mixins -&gt; index -&gt; holdsUserAuthority() -&gt; having these user authorities: [ &apos;admin&apos;, &apos;dummy&apos; ] [&quot;dummy&quot;] to return true"
+      duration="0"/>
+    <testCase
+      name="@/mixins -&gt; index -&gt; holdsUserAuthority() -&gt; having these user authorities: [ &apos;admin&apos;, &apos;dummy&apos;, &apos;AppDeveloper&apos; ] [] to return false"
+      duration="0"/>
+    <testCase
+      name="@/mixins -&gt; index -&gt; holdsUserAuthority() -&gt; having these user authorities: [ &apos;admin&apos;, &apos;dummy&apos;, &apos;AppDeveloper&apos; ] null to return false"
+      duration="0"/>
+    <testCase
+      name="@/mixins -&gt; index -&gt; holdsUserAuthority() -&gt; having these user authorities: [ &apos;admin&apos;, &apos;dummy&apos;, &apos;AppDeveloper&apos; ] undefined to return false"
+      duration="0"/>
+  </file>
+</testExecutions>
